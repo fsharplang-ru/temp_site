@@ -3,9 +3,15 @@ os:
   - linux
 dotnet: 2.2.105
 mono: none
+# GITHUB_OAUTH_TOKEN
 
 install:
   - dotnet tool install --global fornax
   - export PATH="$PATH:/home/travis/.dotnet/tools"
 script:
   - travis_wait 60 fornax build
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_OAUTH_TOKEN
+  local_dir: _public
