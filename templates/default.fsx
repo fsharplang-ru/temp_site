@@ -10,7 +10,7 @@ let defaultPage (siteModel : SiteModel) pageTitle content =
             title [] [ (!! pageTitle) ]
             link [ Rel "stylesheet"; Type "text/css"; Href "/css/style.css" ]
             link [ Rel "alternate"; Type "application/atom+xml"; Href "/feed.xml"; HtmlProperties.Title "News Feed" ]
-
+            base [ Href "fsharplang.ru/temp_site/"]
         ]
         body [] [
             div [Class "container"] [
