@@ -1,0 +1,11 @@
+language: csharp
+os:
+  - linux
+dotnet: 2.2.105
+mono: none
+
+install:
+  - dotnet tool install --global fornax
+  - export PATH="$PATH:/home/travis/.dotnet/tools"
+script:
+  - travis_wait 60 fornax build
