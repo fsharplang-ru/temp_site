@@ -9,7 +9,7 @@ install:
   - dotnet tool install --global fornax
   - export PATH="$PATH:/home/travis/.dotnet/tools"
 script:
-  - travis_wait 60 fornax build
+  - Fornax build
 deploy:
   provider: pages
   skip_cleanup: true
