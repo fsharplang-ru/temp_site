@@ -4,10 +4,12 @@ os:
 dotnet: 2.2.105
 mono: none
 # GITHUB_OAUTH_TOKEN
-
+before_install: 
+  - nvm install node
 install:
   - dotnet tool install --global fornax
   - export PATH="$PATH:/home/travis/.dotnet/tools"
+  - npm install -g sass
 script:
   - Fornax build
 deploy:
