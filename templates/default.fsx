@@ -16,9 +16,9 @@ let defaultPage (siteModel : SiteModel) pageTitle content =
             div [Class "container"] [
                 header [ Class "masthead"] [
                     h3 [Class "masthead-title"] [
-                        a [ Href "/" ] [ !! (siteModel.title)]
+                        a [ Href "http://fsharplang.ru/temp_site/" ] [ !! (siteModel.title)]
                         small [ Class "masthead-link" ] [
-                            a [ Href "/archive.html"] [ !! "Archive"]
+                            a [ Href "archive.html"] [ !! "Archive"]
                         ]
                     ]
                 ]
